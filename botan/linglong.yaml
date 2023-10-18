@@ -1,0 +1,29 @@
+package:
+  id: botan
+  name: botan
+  version: 3.2.0
+  kind: lib
+  description: |
+    Botan (Japanese for peony flower) is a C++ cryptography library released under the permissive Simplified BSD license.
+
+
+runtime:
+  id: org.deepin.Runtime
+  version: 23.0.0
+
+
+source:
+  kind: git
+  url: https://github.com/randombit/botan.git
+  commit: 6f466a2704a31856ebc27451ca861527d3dd00a1
+
+
+build:
+  kind: manual
+  manual:
+    configure: |
+      ./configure.py
+    build: |
+      make
+    install: |
+      make install
